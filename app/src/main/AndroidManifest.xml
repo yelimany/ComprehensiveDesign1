@@ -34,10 +34,10 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAp0EHOC1OJFzzi3S2_3luFM7APd_fukaw" />
+            android:value="-----key-----" />
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="c0ztuxg8m8" />
+            android:value="-----key-----" />
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.flatload.provider"
