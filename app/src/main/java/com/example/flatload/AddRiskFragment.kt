@@ -13,6 +13,8 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -23,6 +25,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.FileProvider
+import androidx.core.widget.addTextChangedListener
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_add_risk.*
@@ -34,7 +37,7 @@ import com.google.gson.GsonBuilder
 import com.mapbox.geojson.Point
 import kotlinx.android.synthetic.main.activity_input_way.*
 import kotlinx.android.synthetic.main.fragment_input_way.*
-import kotlinx.android.synthetic.main.fragment_input_way.textviewJSONText
+//import kotlinx.android.synthetic.main.fragment_input_way.textviewJSONText
 import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -196,6 +199,23 @@ class AddRiskFragment : Fragment() {
             }
             Toast.makeText(requireContext(),"등록 데이터 버튼", Toast.LENGTH_SHORT).show()
         }
+        editText_addrisk_comment.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+                var input = editText_addrisk_comment.text.toString()
+                textview_addrisk_countText.text = input.length.toString() + "/50"
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                var input = editText_addrisk_comment.text.toString()
+                textview_addrisk_countText.text = input.length.toString() + "/50"
+            }
+
+
+        })
     }
 
     private fun getType():String{
@@ -235,7 +255,7 @@ class AddRiskFragment : Fragment() {
         var gson = GsonBuilder().setLenient().create()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.219.107:8080") //"http://112.148.189.103:8080/"
+            .baseUrl("http://13.125.145.5:8080") //"http://112.148.189.103:8080/"  192.168.219.107
             .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -248,7 +268,7 @@ class AddRiskFragment : Fragment() {
                     Toast.makeText(requireContext(), "위험요소가 등록되었습니다", Toast.LENGTH_SHORT).show()
                     Log.d("MYTEST","onResponse"+response?.body().toString())
                 }else{
-                    Toast.makeText(requireContext(), "위험요소 등록에 실패했습니다", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "성공 위험요소 등록에 실패했습니다", Toast.LENGTH_SHORT).show()
                 }
             }
             override fun onFailure(call: Call<String>, t: Throwable) {
@@ -288,34 +308,40 @@ class AddRiskFragment : Fragment() {
 
     //카메라에서 찍은 사진을 결과로 호출
     @RequiresApi(Build.VERSION_CODES.Q)
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?){
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         // 카메라 촬영을 하면 이미지뷰에 사진 삽입
-        if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == AppCompatActivity.RESULT_OK){
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == AppCompatActivity.RESULT_OK) {
             photoUri = Uri.fromFile(photoFile)      //실제 URI(file://으로 시작)
             //viewModel.changeImageView(photoUri)     //CameraViewModel
             setImageView(photoUri)
-            Log.d("MYTEST",photoUri.toString())
+            Log.d("MYTEST", photoUri.toString())
         }
-        if(requestCode==REQUEST_PICK_IMAGE && resultCode == AppCompatActivity.RESULT_OK) {
+        if (requestCode == REQUEST_PICK_IMAGE && resultCode == AppCompatActivity.RESULT_OK) {
             if (data != null) {
                 val uri = data.getData()                //선택한 이미지를 지칭하는 Uri 객체
-                val resolver = requireActivity().getContentResolver()     //Content provider로 해당 이미지에 대한 데이터를 SQLite 데이터베이스에서 읽어온다
-                Log.d("MYTEST",uri.toString())
-                if (uri!=null) {
+                val resolver =
+                    requireActivity().getContentResolver()     //Content provider로 해당 이미지에 대한 데이터를 SQLite 데이터베이스에서 읽어온다
+                Log.d("MYTEST", uri.toString())
+                if (uri != null) {
                     val cursor = uri.let { resolver.query(it, null, null, null, null) }
                     cursor?.use {
                         val idColumn = cursor.getColumnIndexOrThrow(MediaStore.Images.Media._ID)
                         val displayNameColumn =
                             cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DISPLAY_NAME)
-                        val relativePathColumn = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.RELATIVE_PATH)
+                        val relativePathColumn =
+                            cursor.getColumnIndexOrThrow(MediaStore.Images.Media.RELATIVE_PATH)
                         while (cursor.moveToNext()) {
                             val id = cursor.getLong(idColumn)
                             val displayName = cursor.getString(displayNameColumn)
                             val relativePath = cursor.getString(relativePathColumn)
                             mediaimage = mediaImage(id, displayName, relativePath)
-                            photoUri = ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, id) //mediastore URI
-                            Log.d("MYTEST","*"+photoUri.toString())
+                            Log.d("MYTEST", mediaimage.toString())
+                            photoUri = ContentUris.withAppendedId(
+                                MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                                id
+                            ) //mediastore URI
+                            Log.d("MYTEST", "*" + photoUri.toString())
                             //viewModel.changeImageView(photoUri)            //CameraViewModel
                             setImageView(photoUri)
                             getAbsolutePath()

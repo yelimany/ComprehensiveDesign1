@@ -26,155 +26,185 @@
 15-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:9:5-69
 15-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:9:22-66
 16
-17    <!-- Include required permissions for Google Maps API to run. -->
-18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-18-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
-18-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:22-76
-19
+17    <uses-feature
+17-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:9:5-11:35
+18        android:glEsVersion="0x00020000"
+18-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:10:9-41
+19        android:required="true" />
+19-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:11:9-32
 20    <uses-feature
-20-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:26:5-28:35
-21        android:glEsVersion="0x00020000"
-21-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:27:9-41
-22        android:required="true" />
-22-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:28:9-32
+20-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:12:5-14:36
+21        android:name="android.hardware.wifi"
+21-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:13:9-45
+22        android:required="false" />
+22-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:14:9-33
 23
-24    <queries>
-24-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:30:5-34:15
-25
-26        <!-- Needs to be explicitly declared on Android R+ -->
-27        <package android:name="com.google.android.apps.maps" />
-27-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:9-64
-27-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:18-61
-28    </queries>
-29
-30    <uses-feature
-30-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\e02f8f9a4c1b2af93877e49e3688261c\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:12:5-14:36
-31        android:name="android.hardware.wifi"
-31-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\e02f8f9a4c1b2af93877e49e3688261c\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:13:9-45
-32        android:required="false" />
-32-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\e02f8f9a4c1b2af93877e49e3688261c\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:14:9-33
+24    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+24-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:17:5-79
+24-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:17:22-76
+25    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+25-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:18:5-76
+25-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:18:22-73
+26
+27    <queries>
+27-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:30:5-34:15
+28
+29        <!-- Needs to be explicitly declared on Android R+ -->
+30        <package android:name="com.google.android.apps.maps" />
+30-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:9-64
+30-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:18-61
+31    </queries> <!-- Required for CrashReporterJobIntentService on API levels below 25 -->
+32    <uses-permission android:name="android.permission.WAKE_LOCK" />
+32-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:12:5-68
+32-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:12:22-65
 33
-34    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required for CrashReporterJobIntentService on API levels below 25 -->
-34-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\e02f8f9a4c1b2af93877e49e3688261c\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:18:5-76
-34-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\e02f8f9a4c1b2af93877e49e3688261c\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:18:22-73
-35    <uses-permission android:name="android.permission.WAKE_LOCK" />
-35-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:12:5-68
-35-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:12:22-65
-36
-37    <application
-37-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:11:5-47:19
-38        android:allowBackup="true"
-38-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:12:9-35
-39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-39-->[androidx.core:core:1.5.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\904ad29fcb38cbbb538791c4e3d9e844\core-1.5.0\AndroidManifest.xml:24:18-86
-40        android:debuggable="true"
-41        android:extractNativeLibs="false"
-42        android:icon="@mipmap/ic_launcher"
-42-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:13:9-43
-43        android:label="@string/app_name"
-43-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:14:9-41
-44        android:networkSecurityConfig="@xml/network_security_config"
-44-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:15:9-69
-45        android:roundIcon="@mipmap/ic_launcher_round"
-45-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:16:9-54
-46        android:supportsRtl="true"
-46-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:17:9-35
-47        android:testOnly="true"
-48        android:theme="@style/AppTheme"
-48-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:18:9-40
-49        android:usesCleartextTraffic="true" >
-49-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:19:9-44
-50        <activity android:name="com.example.flatload.MarkerResultActivity" />
-50-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:20:9-67
-50-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:20:19-55
-51        <activity android:name="com.example.flatload.TestGetServerActivity" />
-51-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:21:9-59
-51-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:21:19-56
-52        <activity android:name="com.example.flatload.MapActivity" />
-52-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:22:9-49
-52-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:22:19-46
-53        <activity android:name="com.example.flatload.InputWayActivity" />
-53-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:23:9-54
-53-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:23:19-51
-54        <activity android:name="com.example.flatload.MainActivity" >
-54-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:24:9-30:20
-54-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:24:19-47
-55            <intent-filter>
-55-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:25:13-29:29
-56                <action android:name="android.intent.action.MAIN" />
-56-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:26:17-69
-56-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:26:25-66
-57
-58                <category android:name="android.intent.category.LAUNCHER" />
-58-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:28:17-77
-58-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:28:27-74
-59            </intent-filter>
-60        </activity>
-61
-62        <meta-data
-62-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:32:9-34:69
-63            android:name="com.google.android.gms.version"
-63-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:33:13-58
-64            android:value="@integer/google_play_services_version" />
-64-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:34:13-66
+34    <application
+34-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:11:5-50:19
+35        android:allowBackup="true"
+35-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:12:9-35
+36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+36-->[androidx.core:core:1.5.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\904ad29fcb38cbbb538791c4e3d9e844\core-1.5.0\AndroidManifest.xml:24:18-86
+37        android:debuggable="true"
+38        android:extractNativeLibs="false"
+39        android:icon="@mipmap/ic_launcher"
+39-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:13:9-43
+40        android:label="@string/app_name"
+40-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:14:9-41
+41        android:networkSecurityConfig="@xml/network_security_config"
+41-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:15:9-69
+42        android:roundIcon="@mipmap/ic_launcher_round"
+42-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:16:9-54
+43        android:supportsRtl="true"
+43-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:17:9-35
+44        android:testOnly="true"
+45        android:theme="@style/AppTheme"
+45-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:18:9-40
+46        android:usesCleartextTraffic="true" >
+46-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:19:9-44
+47        <activity android:name="com.example.flatload.MarkerResultActivity" />
+47-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:20:9-67
+47-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:20:19-55
+48        <activity android:name="com.example.flatload.TestGetServerActivity" />
+48-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:21:9-59
+48-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:21:19-56
+49        <activity android:name="com.example.flatload.MapActivity" />
+49-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:22:9-49
+49-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:22:19-46
+50        <activity android:name="com.example.flatload.InputWayActivity" />
+50-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:23:9-54
+50-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:23:19-51
+51        <activity android:name="com.example.flatload.MainActivity" >
+51-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:24:9-30:20
+51-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:24:19-47
+52            <intent-filter>
+52-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:25:13-29:29
+53                <action android:name="android.intent.action.MAIN" />
+53-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:26:17-69
+53-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:26:25-66
+54
+55                <category android:name="android.intent.category.LAUNCHER" />
+55-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:28:17-77
+55-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:28:27-74
+56            </intent-filter>
+57        </activity>
+58
+59        <meta-data
+59-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:32:9-34:69
+60            android:name="com.google.android.gms.version"
+60-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:33:13-58
+61            android:value="@integer/google_play_services_version" />
+61-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:34:13-66
+62        <!-- <meta-data -->
+63        <!-- android:name="com.google.android.geo.API_KEY" -->
+64        <!-- android:value="AIzaSyAp0EHOC1OJFzzi3S2_3luFM7APd_fukaw" /> -->
 65        <meta-data
-65-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:35:9-37:71
-66            android:name="com.google.android.geo.API_KEY"
-66-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:36:13-58
-67            android:value="AIzaSyAp0EHOC1OJFzzi3S2_3luFM7APd_fukaw" />
-67-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:37:13-68
+65-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:38:9-40:41
+66            android:name="com.naver.maps.map.CLIENT_ID"
+66-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:39:13-56
+67            android:value="l56nu9rxxp" />
+67-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:40:13-39
 68
 69        <provider
-69-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:38:9-46:20
+69-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:41:9-49:20
 70            android:name="androidx.core.content.FileProvider"
-70-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:39:13-62
+70-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:42:13-62
 71            android:authorities="com.example.flatload.provider"
-71-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:40:13-64
+71-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:43:13-64
 72            android:exported="false"
-72-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:41:13-37
+72-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:44:13-37
 73            android:grantUriPermissions="true" >
-73-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:42:13-47
+73-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:45:13-47
 74            <meta-data
-74-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:43:13-45:53
+74-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:46:13-48:53
 75                android:name="android.support.FILE_PROVIDER_PATHS"
-75-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:44:17-67
+75-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:47:17-67
 76                android:resource="@xml/file_path" />
-76-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:45:17-50
+76-->D:\code\android\Android_menu\Android\FlatLoad_Real\app\src\main\AndroidManifest.xml:48:17-50
 77        </provider>
-78        <!-- Needs to be explicitly declared on P+ -->
-79        <uses-library
-79-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
-80            android:name="org.apache.http.legacy"
-80-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
-81            android:required="false" />
-81-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
-82
-83        <provider
-83-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:18:9-22:39
-84            android:name="com.mapbox.android.telemetry.provider.MapboxTelemetryInitProvider"
-84-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:19:13-93
-85            android:authorities="com.example.flatload.mapboxtelemetryinitprovider"
-85-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:20:13-79
-86            android:exported="false"
-86-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:21:13-37
-87            android:initOrder="100" />
-87-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:22:13-36
-88
-89        <service
-89-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:24:9-26:72
-90            android:name="com.mapbox.android.telemetry.errors.ErrorReporterJobIntentService"
-90-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:25:13-93
-91            android:permission="android.permission.BIND_JOB_SERVICE" />
-91-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:26:13-69
-92
-93        <activity
-93-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\b4a50fd7abf5f7d9159cfe9592e2a72e\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
-94            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-94-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\b4a50fd7abf5f7d9159cfe9592e2a72e\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
-95            android:exported="false"
-95-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\b4a50fd7abf5f7d9159cfe9592e2a72e\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
-96            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-96-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\b4a50fd7abf5f7d9159cfe9592e2a72e\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
-97    </application>
-98
-99</manifest>
+78
+79        <activity
+79-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:21:9-25:51
+80            android:name="com.naver.maps.map.app.LegendActivity"
+80-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:22:13-65
+81            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+81-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:23:13-91
+82            android:label="@string/navermap_legend"
+82-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:24:13-52
+83            android:theme="@style/navermap_app" />
+83-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:25:13-48
+84        <activity
+84-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:26:9-30:51
+85            android:name="com.naver.maps.map.app.LegalNoticeActivity"
+85-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:27:13-70
+86            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+86-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:28:13-91
+87            android:label="@string/navermap_legal_notice"
+87-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:29:13-58
+88            android:theme="@style/navermap_app" />
+88-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:30:13-48
+89        <activity
+89-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:31:9-35:51
+90            android:name="com.naver.maps.map.app.OpenSourceLicenseActivity"
+90-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:32:13-76
+91            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+91-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:33:13-91
+92            android:label="@string/navermap_open_source_license"
+92-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:34:13-65
+93            android:theme="@style/navermap_app" /> <!-- Needs to be explicitly declared on P+ -->
+93-->[com.naver.maps:map-sdk:3.12.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\9d64f41a4d1fc5d6f0ac1cc206d8a4fb\jetified-map-sdk-3.12.0\AndroidManifest.xml:35:13-48
+94        <uses-library
+94-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
+95            android:name="org.apache.http.legacy"
+95-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
+96            android:required="false" />
+96-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\968d6d66334c1415c655529816f81676\jetified-play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
+97
+98        <provider
+98-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:18:9-22:39
+99            android:name="com.mapbox.android.telemetry.provider.MapboxTelemetryInitProvider"
+99-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:19:13-93
+100            android:authorities="com.example.flatload.mapboxtelemetryinitprovider"
+100-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:20:13-79
+101            android:exported="false"
+101-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:21:13-37
+102            android:initOrder="100" />
+102-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:22:13-36
+103
+104        <service
+104-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:24:9-26:72
+105            android:name="com.mapbox.android.telemetry.errors.ErrorReporterJobIntentService"
+105-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:25:13-93
+106            android:permission="android.permission.BIND_JOB_SERVICE" />
+106-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\a1f2d1cc49f77210c43bbcbff25b3cc9\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:26:13-69
+107
+108        <activity
+108-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\b4a50fd7abf5f7d9159cfe9592e2a72e\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+109            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+109-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\b4a50fd7abf5f7d9159cfe9592e2a72e\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+110            android:exported="false"
+110-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\b4a50fd7abf5f7d9159cfe9592e2a72e\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+111            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+111-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\gaeunpark\.gradle\caches\transforms-2\files-2.1\b4a50fd7abf5f7d9159cfe9592e2a72e\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+112    </application>
+113
+114</manifest>

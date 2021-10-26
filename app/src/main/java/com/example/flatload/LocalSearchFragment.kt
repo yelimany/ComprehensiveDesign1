@@ -1,13 +1,17 @@
 package com.example.flatload
 
+import android.os.AsyncTask
 import android.os.Bundle
+import android.text.Html
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
+import android.widget.ListView
 import android.widget.Toast
+import androidx.core.text.parseAsHtml
 import kotlinx.android.synthetic.main.fragment_add_risk.*
 import kotlinx.android.synthetic.main.fragment_local_search.*
 import org.json.JSONObject
@@ -17,6 +21,8 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
+import java.net.HttpURLConnection
+import java.net.URL
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -88,9 +94,10 @@ class RocalSearchFragment : Fragment() {
                 Toast.makeText(requireContext(),"값을 입력해주세요", Toast.LENGTH_SHORT).show()
             }
         }
-        val localAdapter = ListViewAdapter(itemList)
-        listView.adapter = localAdapter
-        listView.setOnItemClickListener {
+        //listview 클릭 리스너
+        //val localAdapter = ListViewAdapter(itemList)
+        //listView.adapter = localAdapter
+        listView2.setOnItemClickListener {
                 parent: AdapterView<*>,
                 view: View,
                 position: Int,
@@ -102,6 +109,18 @@ class RocalSearchFragment : Fragment() {
     private fun getRocal(search:String){
         testRetrofit(search)
     }
+//    inner class AsyncTaskHandleJson: AsyncTask<String, String, String>(){
+//        override fun doInBackground(var url: String?):String{
+//            var text: String
+//            val connection = URL(url[0]).openConnect() as HttpURLConnection
+//
+//            try{
+//                connection..connect()
+//            }catch (){
+//
+//            }
+//        }
+//    }
     private fun testRetrofit(search:String){
 //        var query : RequestBody = RequestBody.create(MediaType.parse("text/plain"),search)
 //        var display : RequestBody = RequestBody.create(MediaType.parse("text/plain"),"5")
@@ -117,6 +136,9 @@ class RocalSearchFragment : Fragment() {
             .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+        //val listRocal: MutableList<>
+        itemList.clear()
+        val re = "<b>|</b>".toRegex()
         val client = retrofit.create(FlatAPI::class.java)
         client.getSearchRocal(getString(R.string.client_id_naver_rocal),
                                 getString(R.string.access_token_naver_rocal),
@@ -129,15 +151,20 @@ class RocalSearchFragment : Fragment() {
                         val jsonObject2 = jsonArray.getJSONObject(i)
                         //val item = Json.parse(ItemList.serializer(),jsonObject2)
                         //val data = Gson().fromJson(jsonObject2, ItemList::class.java)
-                        var data = ItemList(jsonObject2.getString("title"),
-                            jsonObject2.getString("category"),
+                        var x = jsonObject2.getString("category").split('>')
+                        var y = if (x.size > 1) x.get(1) else x.get(0)
+                        itemList.add(ItemList(jsonObject2.getString("title").replace(re,""),
+                            y,
                             jsonObject2.getString("address"),
                             jsonObject2.getString("roadAddress"),
                             jsonObject2.getString("mapx"),
                             jsonObject2.getString("mapy"))
+                        )
                         Log.d("MYTEST",jsonObject2.toString())
                     }
                     Log.d("MYTEST","onResponse"+response?.body().toString())
+                    Log.d("MYTEST",itemList.toString())
+                    listView2.adapter = ListViewAdapter(itemList)
                 }else{
                     Toast.makeText(requireContext(), "주소 검색에 실패했습니다", Toast.LENGTH_SHORT).show()
                 }
@@ -149,5 +176,4 @@ class RocalSearchFragment : Fragment() {
             }
         })
     }
-
 }

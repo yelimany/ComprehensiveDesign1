@@ -1,5 +1,6 @@
 package com.example.flatload
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,14 +20,14 @@ class ListViewAdapter(val item: MutableList<ItemList>):BaseAdapter() {
         }
         convertView?.let {
             val name = convertView.findViewById<TextView>(R.id.textview_list_name)
-            val address = convertView.findViewById<TextView>(R.id.textview_list_address)
+            //val address = convertView.findViewById<TextView>(R.id.textview_list_address)
             val roadaddress = convertView.findViewById<TextView>(R.id.textview_list_roadaddress)
             val type = convertView.findViewById<TextView>(R.id.textview_list_type)
 
             val item: ItemList = item[position]
             name.text = item.title
-            address.text = item.address
-            roadaddress.text = item.roadAddress
+            //address.text = item.address
+            roadaddress.text = if (item.roadAddress.length == 0) item.address else item.roadAddress
             type.text = item.category
 
             //return convertView

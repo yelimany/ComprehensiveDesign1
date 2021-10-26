@@ -27,12 +27,19 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim fragment_fast_out_extra_slow_in
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
+animator fragment_close_enter
+animator fragment_close_exit
+animator fragment_fade_enter
+animator fragment_fade_exit
+animator fragment_open_enter
+animator fragment_open_exit
 animator linear_indeterminate_line1_head_interpolator
 animator linear_indeterminate_line1_tail_interpolator
 animator linear_indeterminate_line2_head_interpolator
@@ -50,6 +57,8 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array navermap_info_menu
+array route_type
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -776,6 +785,63 @@ attr motion_postLayoutCollision
 attr motion_triggerOnCollision
 attr moveWhenScrollAtTop
 attr multiChoiceItemLayout
+attr navermap_background
+attr navermap_backgroundColor
+attr navermap_backgroundImage
+attr navermap_bearing
+attr navermap_buildingHeight
+attr navermap_cjkLocalGlyphRasterizationEnabled
+attr navermap_compassEnabled
+attr navermap_contentPadding
+attr navermap_contentPaddingBottom
+attr navermap_contentPaddingLeft
+attr navermap_contentPaddingRight
+attr navermap_contentPaddingTop
+attr navermap_defaultCameraAnimationDuration
+attr navermap_enabledLayerGroups
+attr navermap_extent
+attr navermap_fpsLimit
+attr navermap_indoorEnabled
+attr navermap_indoorFocusRadius
+attr navermap_indoorLevelPickerEnabled
+attr navermap_latitude
+attr navermap_lightness
+attr navermap_liteModeEnabled
+attr navermap_localTypefaceFactoryClass
+attr navermap_locationButtonEnabled
+attr navermap_logoClickEnabled
+attr navermap_logoGravity
+attr navermap_logoMargin
+attr navermap_logoMarginBottom
+attr navermap_logoMarginLeft
+attr navermap_logoMarginRight
+attr navermap_logoMarginTop
+attr navermap_longitude
+attr navermap_mapType
+attr navermap_maxZoom
+attr navermap_minZoom
+attr navermap_nightModeEnabled
+attr navermap_pickTolerance
+attr navermap_preserveEGLContextOnPause
+attr navermap_rotateGesturesEnabled
+attr navermap_rotateGesturesFriction
+attr navermap_rtlEnabled
+attr navermap_scaleBarEnabled
+attr navermap_scrollGesturesEnabled
+attr navermap_scrollGesturesFriction
+attr navermap_stopGesturesEnabled
+attr navermap_symbolPerspectiveRatio
+attr navermap_symbolScale
+attr navermap_tilt
+attr navermap_tiltGesturesEnabled
+attr navermap_translucentTextureSurface
+attr navermap_useTextureView
+attr navermap_useVulkanView
+attr navermap_zOrderMediaOverlay
+attr navermap_zoom
+attr navermap_zoomControlEnabled
+attr navermap_zoomGesturesEnabled
+attr navermap_zoomGesturesFriction
 attr navigationContentDescription
 attr navigationIcon
 attr navigationIconTint
@@ -1283,6 +1349,13 @@ color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
+color navermap_indoor_level_picker_item_background_normal
+color navermap_indoor_level_picker_item_background_pressed
+color navermap_indoor_level_picker_item_background_selected
+color navermap_location_button_progress
+color navermap_primary
+color navermap_scale_bar_text_dark
+color navermap_scale_bar_text_light
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -1717,6 +1790,9 @@ dimen mtrl_tooltip_minHeight
 dimen mtrl_tooltip_minWidth
 dimen mtrl_tooltip_padding
 dimen mtrl_transition_shared_axis_slide_distance
+dimen navermap_default_logo_margin_bottom
+dimen navermap_default_logo_margin_left
+dimen navermap_scale_bar_min_width
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -1881,6 +1957,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edit_style
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_clock_black_24dp
@@ -1931,6 +2008,54 @@ drawable mtrl_navigation_bar_item_background
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
+drawable navermap_compass
+drawable navermap_default_background_dark
+drawable navermap_default_background_light
+drawable navermap_default_cluster_icon_high_density
+drawable navermap_default_cluster_icon_low_density
+drawable navermap_default_cluster_icon_medium_density
+drawable navermap_default_ground_overlay_image
+drawable navermap_default_info_window_background
+drawable navermap_default_info_window_icon
+drawable navermap_default_location_overlay_sub_icon_arrow
+drawable navermap_default_location_overlay_sub_icon_cone
+drawable navermap_default_marker_icon_black
+drawable navermap_default_marker_icon_blue
+drawable navermap_default_marker_icon_gray
+drawable navermap_default_marker_icon_green
+drawable navermap_default_marker_icon_lightblue
+drawable navermap_default_marker_icon_pink
+drawable navermap_default_marker_icon_red
+drawable navermap_default_marker_icon_yellow
+drawable navermap_indoor_control_item_background
+drawable navermap_indoor_level_picker_background
+drawable navermap_location_disabled
+drawable navermap_location_face
+drawable navermap_location_face_normal
+drawable navermap_location_face_pressed
+drawable navermap_location_follow
+drawable navermap_location_follow_normal
+drawable navermap_location_follow_pressed
+drawable navermap_location_no_follow
+drawable navermap_location_no_follow_normal
+drawable navermap_location_no_follow_pressed
+drawable navermap_location_none
+drawable navermap_location_none_normal
+drawable navermap_location_none_pressed
+drawable navermap_location_overlay_icon
+drawable navermap_naver_logo_dark
+drawable navermap_naver_logo_light
+drawable navermap_scale_bar_dark
+drawable navermap_scale_bar_light
+drawable navermap_zoom_div
+drawable navermap_zoom_in
+drawable navermap_zoom_in_disabled
+drawable navermap_zoom_in_normal
+drawable navermap_zoom_in_pressed
+drawable navermap_zoom_out
+drawable navermap_zoom_out_disabled
+drawable navermap_zoom_out_normal
+drawable navermap_zoom_out_pressed
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -2125,6 +2250,7 @@ id easeInOut
 id easeOut
 id editTextEnd
 id editTextStart
+id editText_addrisk_comment
 id editText_addrisk_location
 id editText_addrisk_type
 id editText_inputway_end
@@ -2140,6 +2266,9 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab_main
+id fab_sub1
+id fab_sub2
 id fade
 id fill
 id fill_horizontal
@@ -2154,6 +2283,8 @@ id flip
 id floating
 id forever
 id four
+id fragment_container_view_tag
+id frame
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2176,6 +2307,8 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageButton1
+id imageButton2
 id imageView
 id imageView2
 id imageView3
@@ -2199,6 +2332,7 @@ id line3
 id linear
 id listMode
 id listView
+id listView2
 id list_item
 id mapView
 id marker_window_snippet
@@ -2258,6 +2392,34 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id navermap
+id navermap_bar
+id navermap_compass
+id navermap_compass_icon
+id navermap_connection
+id navermap_container
+id navermap_copyright
+id navermap_indoor_level_picker
+id navermap_level
+id navermap_location_button
+id navermap_location_icon
+id navermap_location_icon_progress_overlay
+id navermap_logo
+id navermap_map_controls
+id navermap_map_view
+id navermap_menu_title
+id navermap_open_source_license
+id navermap_progress
+id navermap_recycler_view
+id navermap_scale_bar
+id navermap_scale_container
+id navermap_unit
+id navermap_value
+id navermap_version
+id navermap_zero
+id navermap_zoom_control
+id navermap_zoom_in
+id navermap_zoom_out
 id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
@@ -2270,6 +2432,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id obstacle
 id off
 id on
 id outline
@@ -2337,6 +2500,8 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id special_effects_controller_view_tag
+id spinner
 id spline
 id split_action_bar
 id spread
@@ -2392,6 +2557,7 @@ id textView4
 id textView5
 id textView6
 id textView7
+id textView_addrisk_description
 id textView_addrisk_location
 id textView_addrisk_photo
 id textView_addrisk_title
@@ -2409,7 +2575,7 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id textviewJSONText
-id textview_list_address
+id textview_addrisk_countText
 id textview_list_name
 id textview_list_roadaddress
 id textview_list_type
@@ -2436,7 +2602,11 @@ id unlabeled
 id up
 id useLogo
 id view_offset_helper
+id view_tree_lifecycle_owner
+id view_tree_saved_state_registry_owner
+id view_tree_view_model_store_owner
 id visible
+id visible_removing_fragment_view_tag
 id wide
 id withText
 id withinBounds
@@ -2585,6 +2755,17 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout navermap_compass_view
+layout navermap_indoor_level_item
+layout navermap_indoor_level_picker
+layout navermap_info_menu_item
+layout navermap_info_view
+layout navermap_location_button_view
+layout navermap_map_controls_view
+layout navermap_map_view
+layout navermap_open_source_license_activity
+layout navermap_scale_bar_view
+layout navermap_zoom_control_view
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -2685,7 +2866,6 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -2767,6 +2947,22 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string navermap_compass
+string navermap_copyright
+string navermap_current_location
+string navermap_info_title
+string navermap_legal_notice
+string navermap_legend
+string navermap_map
+string navermap_naver_logo
+string navermap_open_source_license
+string navermap_pathway
+string navermap_scale_km
+string navermap_scale_m
+string navermap_version
+string navermap_zero
+string navermap_zoom_in
+string navermap_zoom_out
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -3503,6 +3699,7 @@ style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
 style mapbox_LocationComponent
 style mapbox_LocationLayer
+style navermap_app
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
@@ -3553,6 +3750,8 @@ styleable FlowLayout itemSpacing lineSpacing
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery fontProviderSystemFontFamily
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
+styleable Fragment android_name android_id android_tag
+styleable FragmentContainerView android_name android_tag
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc brightness contrast crossfade overlay round roundPercent saturation warmth
@@ -3596,6 +3795,8 @@ styleable MotionHelper onHide onShow
 styleable MotionLayout applyMotionScene currentState layoutDescription motionDebug motionProgress showPaths
 styleable MotionScene defaultDuration layoutDuringTransition
 styleable MotionTelltales telltales_tailColor telltales_tailScale telltales_velocityMode
+styleable NaverMap navermap_background navermap_backgroundColor navermap_backgroundImage navermap_bearing navermap_buildingHeight navermap_cjkLocalGlyphRasterizationEnabled navermap_compassEnabled navermap_contentPadding navermap_contentPaddingBottom navermap_contentPaddingLeft navermap_contentPaddingRight navermap_contentPaddingTop navermap_defaultCameraAnimationDuration navermap_enabledLayerGroups navermap_extent navermap_fpsLimit navermap_indoorEnabled navermap_indoorFocusRadius navermap_indoorLevelPickerEnabled navermap_latitude navermap_lightness navermap_liteModeEnabled navermap_localTypefaceFactoryClass navermap_locationButtonEnabled navermap_logoClickEnabled navermap_logoGravity navermap_logoMargin navermap_logoMarginBottom navermap_logoMarginLeft navermap_logoMarginRight navermap_logoMarginTop navermap_longitude navermap_mapType navermap_maxZoom navermap_minZoom navermap_nightModeEnabled navermap_pickTolerance navermap_preserveEGLContextOnPause navermap_rotateGesturesEnabled navermap_rotateGesturesFriction navermap_scaleBarEnabled navermap_scrollGesturesEnabled navermap_scrollGesturesFriction navermap_stopGesturesEnabled navermap_symbolPerspectiveRatio navermap_symbolScale navermap_tilt navermap_tiltGesturesEnabled navermap_translucentTextureSurface navermap_useTextureView navermap_useVulkanView navermap_zOrderMediaOverlay navermap_zoom navermap_zoomControlEnabled navermap_zoomGesturesEnabled navermap_zoomGesturesFriction
+styleable NaverMapScaleBarView navermap_rtlEnabled
 styleable NavigationBarView backgroundTint elevation itemBackground itemIconSize itemIconTint itemRippleColor itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable NavigationRailView headerLayout menuGravity
 styleable NavigationView android_background android_fitsSystemWindows android_maxWidth elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconSize itemIconTint itemMaxLines itemShapeAppearance itemShapeAppearanceOverlay itemShapeFillColor itemShapeInsetBottom itemShapeInsetEnd itemShapeInsetStart itemShapeInsetTop itemTextAppearance itemTextColor menu shapeAppearance shapeAppearanceOverlay

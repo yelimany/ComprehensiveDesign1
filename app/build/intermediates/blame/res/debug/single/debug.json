@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\code\\android\\Android_menu\\Android\\FlatLoad_Real\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\code\\android\\Android_menu\\Android\\FlatLoad_Real\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "D:\\code\\android\\Android_menu\\Android\\FlatLoad_Real\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_top.xml.flat",
         "source": "D:\\code\\android\\Android_menu\\Android\\FlatLoad_Real\\app\\src\\main\\res\\menu\\menu_top.xml"
+    },
+    {
+        "merged": "D:\\code\\android\\Android_menu\\Android\\FlatLoad_Real\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\code\\android\\Android_menu\\Android\\FlatLoad_Real\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "D:\\code\\android\\Android_menu\\Android\\FlatLoad_Real\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_local_search.xml.flat",
@@ -122,6 +122,10 @@
     {
         "merged": "D:\\code\\android\\Android_menu\\Android\\FlatLoad_Real\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "D:\\code\\android\\Android_menu\\Android\\FlatLoad_Real\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\code\\android\\Android_menu\\Android\\FlatLoad_Real\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edit_style.xml.flat",
+        "source": "D:\\code\\android\\Android_menu\\Android\\FlatLoad_Real\\app\\src\\main\\res\\drawable\\edit_style.xml"
     },
     {
         "merged": "D:\\code\\android\\Android_menu\\Android\\FlatLoad_Real\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",

@@ -88,14 +88,14 @@ class InputWayActivity : AppCompatActivity() { //출발지 도착지 입력 화�
             pairList.clear()
             editTextStart.text.clear()
             editTextEnd.text.clear()
-            textviewJSONText.setText(" ")
+            //textviewJSONText.setText(" ")
         }
     }
 
     private fun savePointToList(point: Point){
         PointList.add(point)
         if(PointList.size == 2){
-            textviewJSONText.setText(" ")
+            //textviewJSONText.setText(" ")
             getRoute(PointList[0], PointList[1])
         }
     }
@@ -260,7 +260,7 @@ class InputWayActivity : AppCompatActivity() { //출발지 도착지 입력 화�
                     }
                 }
                 Log.i("이동거리,소요시간 출력", distance_km.toString() +"km, "+duration_min.toString()+"분")
-                textviewJSONText?.setText(pairList.toString()) //textview로 띄움
+                //textviewJSONText?.setText(pairList.toString()) //textview로 띄움
                 flag=1
                 val result = checkDistance(distance_km)
                 if(result == 1){
@@ -279,7 +279,7 @@ class InputWayActivity : AppCompatActivity() { //출발지 도착지 입력 화�
     private fun checkDistance(distanceKm: Float): Int {
         if(distanceKm >= 3.00){
             Toast.makeText(this,"해당 서비스는 3km 이내의 도보 길찾기 경로만 제공 합니다.", Toast.LENGTH_LONG).show()
-            textviewJSONText.setText(" ")
+            //textviewJSONText.setText(" ")
             editTextStart.text.clear()
             editTextEnd.text.clear()
             return 0

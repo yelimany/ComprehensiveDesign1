@@ -3,12 +3,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/frame"
     tools:context=".MapFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+<!--    <fragment-->
+<!--        android:id="@+id/map_fragment"-->
+<!--        android:name="com.naver.maps.map.MapFragment"-->
+<!--        android:layout_width="413dp"-->
+<!--        android:layout_height="675dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+<!--    <com.naver.maps.map.MapView-->
+<!--        android:id="@+id/navermap"-->
+<!--        android:layout_width="413dp"-->
+<!--        android:layout_height="675dp" />-->
+    <com.naver.maps.map.MapView
+        android:id="@+id/navermap"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="지도 화면" />
+        android:layout_height="match_parent" >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#F97D76"
+            />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_sub1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#F97D76"
+            android:visibility="invisible"
+            />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_sub2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#F97D76"
+            android:visibility="invisible"
+            />
+<!--        <Button-->
+<!--            android:id="@+id/button5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="버튼" />-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="버튼2" />-->
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/camera_img"/>-->
+<!--        <androidx.viewpager2.widget.ViewPager2-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:orientation="horizontal"/>-->
+    </com.naver.maps.map.MapView>
+    <Button
+        android:id="@+id/obstacle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2"
+        android:text="위험요소" />
 
 </FrameLayout>
