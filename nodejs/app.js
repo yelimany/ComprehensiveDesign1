@@ -3,6 +3,8 @@ var count_testloc = 0;
 var count = 0;
 var result =[];
 
+//라우터 설정
+var routeRouter = require('./routes/route');
 
 // 파일시스템 모듈을 이용하여 이미지를 읽은후 base64로 인코딩하기  
 function base64_encode(file) {  
@@ -40,7 +42,10 @@ var fs = require('fs');
 app.set('views',__dirname+'/view');//템플릿 파일의 위치
 app.set('view engine','ejs');//ejs 템플릿 엔진 사용
 
-app.engine('html',require('ejs').renderFile);   
+app.engine('html',require('ejs').renderFile);
+
+//Tmap api
+app.use('/android/post/point', routeRouter);
 
 //8080 포트를 가지고 대기
 const server = app.listen(8080,()=>{
